@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <!-- <img src="./img/logoi.png" alt="" /> -->
+          </div>
+          <ul>
+            <div class="btn">
+              <i class="fas fa-times close-btn"></i>
+            </div>
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>About</li>
+            <li><a href="#"></a>Tours</li>
+            <li><a href="#"></a>Destination</li>
+            <li><a href="#"></a>Gallery</li>
+            <li><a href="#"></a>Contact</li>
+          </ul>
+          <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="slide-container swiper">
+        <div class="slide-content swiper-wrapper">
+          <div class="overlay swiper-slide">
+            <img src="./img/Istanbul.jpg" alt="" />
+            <div class="img-overlay">
+              <p>Let's Travel the World with us</p>
+              <h2><span>Discover</span>The World</h2>
+              <h2>With Our guide</h2>
+            </div>
+          </div>
+          <div class="overlay swiper-slide">
+            <img src="./img/Monaco.jpg" alt="" />
+            <div class="img-overlay">
+              <p>Let's Travel the World with us</p>
+              <h2><span>Discover</span>The World</h2>
+              <h2>With Our guide</h2>
+            </div>
+          </div>
+          <div class="overlay swiper-slide">
+            <img src="./img/Italy.jpg" alt="" />
+            <div class="img-overlay">
+              <p>Let's Travel the World with us</p>
+              <h2>Discover The World</h2>
+              <h2>With Our <span>Travelo</span></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="location-search">
+      <div class="container">
+        <div class="form-wrapper">
+          <form action="#">
+            <input type="text" placeholder="Where to?" class="form-control" />
+            <select class="from-control">
+              <option value="Destination">Destination</option>
+              <option value="Destination">Greece</option>
+              <option value="Destination">London</option>
+              <option value="Destination">Maldives</option>
+              <option value="Destination">Paris</option>
+            </select>
+            <select class="from-control">
+              <option value="duration">Duration</option>
+              <option value="day-1">1 Day Tour</option>
+              <option value="2-4 Days">2-4 Days</option>
+              <option value="5-7 Days Tour">5-7 Days Tour</option>
+              <option value="7+ Days">7+ Days</option>
+            </select>
+            <button type="button" class="primary-btn">Search Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-content-wrapper">
+          <div class="agency-left-side">
+            <div class="heading-normal-txt">THE BEST TRAVEL AGENCY</div>
+            <h2 class="headings">
+              DISCOVER THE <span>WORLD</span>WITH OUR GUIDE
+            </h2>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Repudiandae neque at fuga reiciendis nemo delectus ducimus illo
+              laudantium voluptate cumque aliquid consectetur sunt id ex beatae,
+              laboriosam praesentium laborum ad.
+            </p>
+            <br />
+            <p class="lead">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              amet nisi aliquam ad provident quo necessitatibus, possimus, animi
+              iure illum dolorem sequi architecto error atque cum id doloremque
+              nesciunt voluptate!
+            </p>
+            <ul>
+              <li>
+                <div class="icons">
+                  <i class="fa fa-check"> </i>
+                  <p>20 Years of Experience</p>
+                </div>
+              </li>
+              <li>
+                <div class="icons">
+                  <i class="fa fa-check"> </i>
+                  <p>150 Tour Destination</p>
+                </div>
+              </li>
+              <li>
+                <div class="icons">
+                  <i class="fa fa-phone-volume"> </i>
+                  <p>+383 44814 487</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="agency-right-side">
+            <div class="img">
+              <img src="./img/sea.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
