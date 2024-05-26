@@ -78,13 +78,18 @@ a {
 
 header {
   padding: 1rem 0;
-  /* background: var(--primary-color); */
-  position: absolute;
+
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 6;
   width: 100%;
   height: 100;
+  transition: all 0.3 ease-in-out;
+}
+
+header.sticky {
+  background: var(--primary-color);
 }
 .logo img {
   width: 50%;
@@ -293,4 +298,109 @@ select {
 }
 .agency-right-side .img img:hover {
   transform: scale(0.95);
+}
+
+#choose-place {
+  padding: 6rem 0;
+}
+.choose-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+}
+.lg-img {
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  width: 100%;
+  height: 96%;
+}
+.lg-img:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.lg-img:hover {
+  transform: scale(1.02);
+}
+
+.img-content {
+  position: absolute;
+  bottom: 20px;
+}
+.img-content h2 {
+  padding: 0 2rem;
+  color: var(--white-color);
+}
+.hidden-content {
+  padding: 0.5rem 2rem;
+  color: var(--white-color);
+  transform: translateY(120%);
+  transition: all 0.5s ease-in-out;
+}
+.hidden-content i {
+  padding: 0.2rem 0.2rem 0 0;
+}
+.lg-img:hover .hidden-content {
+  transform: translateY(0%);
+}
+
+.price-label {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: rotate(-90deg);
+}
+
+.row-wise-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+#static-counter {
+  padding: 6rem 0;
+  background: url("../img/maldives1.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 4;
+}
+
+#static-counter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.static-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 0;
+}
+.static-icons {
+  color: var(--white-color);
+  cursor: pointer;
+}
+.static-icons i {
+  font-size: 3rem;
+  padding: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
 }
