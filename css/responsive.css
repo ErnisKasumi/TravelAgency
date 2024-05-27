@@ -87,4 +87,18 @@
     right: 0;
     width: 90%;
   }
+
+  .choose-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .row-wise-img {
+    grid-template-columns: 1fr;
+  }
+  .img-content {
+    bottom: 10px;
+  }
+
+  .static-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

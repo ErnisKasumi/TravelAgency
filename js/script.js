@@ -20,6 +20,7 @@ window.addEventListener("scroll", () => {
 
 const countersEl = document.querySelectorAll(".numbers");
 countersEl.forEach((counters) => {
+  counters.textContent = 0;
   increamentCounters();
 
   function increamentCounters() {
@@ -32,7 +33,7 @@ countersEl.forEach((counters) => {
 
     if (currentNum < dataCeil) {
       counters.textContent = currentNum;
-      setTimeout(increamentCounters, 30);
+      setTimeout(increamentCounters, 70);
     } else {
       counters.textContent = dataCeil;
     }
