@@ -112,4 +112,10 @@
   .video-content span {
     font-size: 1rem;
   }
+  .travel-countries-wrapper {
+    grid-template-columns: 2fr;
+  }
+  .albania-content {
+    grid-template-columns: 2fr;
+  }
 }
