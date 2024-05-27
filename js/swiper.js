@@ -48,3 +48,34 @@ const swiper2 = new Swiper(".swiper2", {
     },
   },
 });
+
+const swiper3 = new Swiper(".swiper3", {
+  slidesPerView: 2,
+  spaceBetween: 35,
+  slidesPerGroup: 1,
+  loop: true,
+  fade: true,
+  centerSlide: true,
+  grabCursor: true,
+  LoopfillGroupwithBlank: true,
+
+  autoplay: {
+    dealy: 5000,
+  },
+  speed: 400,
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 640px
+    968: {
+      slidesPerView: 2,
+    },
+  },
+});
