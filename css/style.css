@@ -403,4 +403,15 @@ select {
   border-radius: 50%;
   border: 2px solid var(--primary-color);
   cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.numbers {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.static-icons i:hover {
+  background: var(--primary-color);
+  border: none;
+  transform: translateY(-20%);
 }

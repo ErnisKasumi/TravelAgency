@@ -17,3 +17,24 @@ window.addEventListener("scroll", () => {
     header.classList.remove("sticky");
   }
 });
+
+const countersEl = document.querySelectorAll(".numbers");
+countersEl.forEach((counters) => {
+  increamentCounters();
+
+  function increamentCounters() {
+    let currentNum = +counters.textContent;
+    const dataCeil = counters.getAttribute("data-ceil");
+
+    const increament = dataCeil / 25;
+
+    currentNum = Math.ceil(currentNum + increament);
+
+    if (currentNum < dataCeil) {
+      counters.textContent = currentNum;
+      setTimeout(increamentCounters, 30);
+    } else {
+      counters.textContent = dataCeil;
+    }
+  }
+});
