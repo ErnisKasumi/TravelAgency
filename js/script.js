@@ -166,3 +166,44 @@ window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("resize", resizeReset);
 window.addEventListener("mousemove", mousemove);
 window.addEventListener("mouseout", mouseout);
+
+//PIXI
+
+// Create the application
+const app = new PIXI.Application({ width: 800, height: 600 });
+document.body.appendChild(app.view);
+
+// Load a texture and create a sprite
+PIXI.Assets.load("./img/sea.jpg")
+  .then((texture) => {
+    const sprite = new PIXI.Sprite(texture);
+
+    // Set the initial position and anchor point of the sprite
+    sprite.anchor.set(0.5);
+    sprite.x = app.screen.width / 2;
+    sprite.y = app.screen.height / 2;
+
+    // Enable the sprite to interact with mouse events
+    sprite.interactive = true;
+    sprite.buttonMode = true;
+
+    // Initial tint color
+    sprite.tint = 0xffffff;
+
+    // Add a click event listener to the sprite
+    sprite.on("pointerdown", () => {
+      // Toggle scale between 1 and 1.5
+      const newScale = sprite.scale.x === 1 ? 1.5 : 1;
+      gsap.to(sprite.scale, { x: newScale, y: newScale, duration: 0.5 });
+
+      // Toggle tint color between white and red
+      const newTint = sprite.tint === 0xffffff ? 0xff0000 : 0xffffff;
+      gsap.to(sprite, { tint: newTint, duration: 0.5 });
+    });
+
+    // Add the sprite to the stage
+    app.stage.addChild(sprite);
+  })
+  .catch((error) => {
+    console.error("Error loading texture:", error);
+  });
