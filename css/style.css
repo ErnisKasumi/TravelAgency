@@ -778,3 +778,15 @@ canvas#canvas {
   text-decoration: none;
   font-size: 12px;
 }
+.dark-mode {
+  background-color: #2b2b2b; /* dark mode background color */
+  color: #ffffff; /* dark mode text color */
+}
+body {
+  background-color: #ffffff; /* default light mode background color */
+  color: #000000; /* default light mode text color */
+}
+#mode-toggle {
+  background: none;
+  color: white;
+}

@@ -198,3 +198,18 @@ PIXI.Assets.load("html")
   .catch((error) => {
     console.error("Error loading texture:", error);
   });
+
+const toggleButton = document.getElementById("mode-toggle");
+const body = document.body;
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  const isDarkMode = body.classList.contains("dark-mode");
+  localStorage.setItem("dark-mode", isDarkMode);
+});
+
+const isDarkMode = JSON.parse(localStorage.getItem("dark-mode"));
+if (isDarkMode) {
+  body.classList.add("dark-mode");
+}
