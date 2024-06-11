@@ -213,3 +213,11 @@ const isDarkMode = JSON.parse(localStorage.getItem("dark-mode"));
 if (isDarkMode) {
   body.classList.add("dark-mode");
 }
+
+PIXI.Loader.shared.add("img/sea.jpg").load(setup);
+
+function setup() {
+  const sprite = new PIXI.Sprite(
+    PIXI.Loader.shared.resources["img/maldives.jpg"].texture
+  );
+}
